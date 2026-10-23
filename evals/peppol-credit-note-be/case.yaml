@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: peppol-credit-note-be
+expected_outcome: |
+  A Peppol BIS 3.0 UBL CreditNote referencing INV-2026-388, positive amounts, line 1 net 198.72 after the 10% discount, the 15.00 goodwill credit (21%) added to the credited amount - on a credit note an allowance would reduce the refund - so totals net 471.72, VAT 69.25 (11.92 at 6% + 57.33 at 21%), total 540.97, passing XSD, CEN and Peppol validation.

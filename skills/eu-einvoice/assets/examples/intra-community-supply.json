@@ -1,0 +1,104 @@
+{
+  "_scenario": "Intra-community supply of goods (VAT category K, 0%), German seller -> Austrian business buyer, EN 16931 UBL",
+  "profile": "en16931-ubl",
+  "type": "invoice",
+  "number": "2026-AT-0815",
+  "issue_date": "2026-10-23",
+  "due_date": "2026-11-06",
+  "currency": "EUR",
+  "order_reference": "PO-4711",
+  "notes": [
+    "Steuerfreie innergemeinschaftliche Lieferung gemäß § 4 Nr. 1b UStG / Intra-Community supply exempt under Art. 138 Directive 2006/112/EC"
+  ],
+  "delivery": {
+    "date": "2026-10-21",
+    "address": {
+      "line1": "Industriestraße 8",
+      "city": "Linz",
+      "postal_code": "4020",
+      "country": "AT"
+    }
+  },
+  "seller": {
+    "name": "Bayern Maschinen GmbH",
+    "vat_id": "DE811569869",
+    "legal_id": {
+      "id": "HRB 98765"
+    },
+    "electronic_address": {
+      "id": "invoice@bayern-maschinen.de",
+      "scheme": "EM"
+    },
+    "address": {
+      "line1": "Werkstraße 3",
+      "city": "Augsburg",
+      "postal_code": "86150",
+      "country": "DE"
+    },
+    "contact": {
+      "name": "Jonas Huber",
+      "email": "faktura@bayern-maschinen.de"
+    }
+  },
+  "buyer": {
+    "name": "Donau Fertigung GmbH",
+    "vat_id": "ATU12345678",
+    "electronic_address": {
+      "id": "eingang@donau-fertigung.at",
+      "scheme": "EM"
+    },
+    "address": {
+      "line1": "Industriestraße 8",
+      "city": "Linz",
+      "postal_code": "4020",
+      "country": "AT"
+    }
+  },
+  "payment": {
+    "means_code": "58",
+    "remittance_info": "2026-AT-0815",
+    "credit_transfers": [
+      {
+        "iban": "DE89370400440532013000",
+        "bic": "COBADEFFXXX"
+      }
+    ],
+    "terms": "14 days net"
+  },
+  "charges": [
+    {
+      "reason": "Transport",
+      "reason_code": "FC",
+      "amount": "180.00",
+      "vat_category": "K"
+    }
+  ],
+  "lines": [
+    {
+      "name": "CNC spindle motor 5.5 kW",
+      "seller_item_id": "SPM-55",
+      "standard_item_id": {
+        "id": "4012345678901",
+        "scheme": "0160"
+      },
+      "quantity": 2,
+      "unit": "C62",
+      "price": "2350.00",
+      "vat_category": "K",
+      "classifications": [
+        {
+          "id": "85015230",
+          "scheme": "HS"
+        }
+      ],
+      "origin_country": "DE"
+    },
+    {
+      "name": "Mounting kit",
+      "quantity": 2,
+      "unit": "SET",
+      "price": "84.50",
+      "vat_category": "K"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: xrechnung-cii-skonto-prepayment
+expected_outcome: |
+  A valid XRechnung 3.0 CII invoice (net 1206.60, VAT 217.49 split 19 %/7 %, prepaid 500.00, due 924.09) with the screw line priced per 100 pieces, freight as a document-level charge, Skonto in the machine-readable #SKONTO# form, and an answer that warns the Leitweg-ID check digits are wrong (34 should be 43) and asks the user to confirm it.

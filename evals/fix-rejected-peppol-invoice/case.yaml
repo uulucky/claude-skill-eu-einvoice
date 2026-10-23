@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: fix-rejected-peppol-invoice
+expected_outcome: |
+  The answer explains the three problems (missing buyer reference / order reference, e-mail used as Peppol endpoint scheme, total with VAT not equal to net + VAT) and delivers a corrected Peppol BIS 3.0 UBL invoice that passes XSD, EN 16931 and Peppol validation, with buyer endpoint 0123456749 scheme 0208, PO-BE-55120 as buyer or order reference, and consistent totals (payable 4655.00 EUR).
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,93 @@
+{
+  "_scenario": "XRechnung 3.0 (UBL), German B2G invoice with Leitweg-ID, two VAT rates, SEPA transfer",
+  "profile": "xrechnung-ubl",
+  "type": "invoice",
+  "number": "RE-2026-0042",
+  "issue_date": "2026-10-23",
+  "due_date": "2026-11-22",
+  "currency": "EUR",
+  "buyer_reference": "04011000-12345-03",
+  "order_reference": "BEST-7781",
+  "notes": [
+    "Leistungszeitraum Oktober 2026"
+  ],
+  "period": {
+    "start": "2026-10-01",
+    "end": "2026-10-31"
+  },
+  "seller": {
+    "name": "Muster Software GmbH",
+    "vat_id": "DE123456782",
+    "legal_id": {
+      "id": "HRB 12345"
+    },
+    "legal_info": "Amtsgericht München HRB 12345, Geschäftsführer: Max Muster",
+    "electronic_address": {
+      "id": "rechnung@muster-software.de",
+      "scheme": "EM"
+    },
+    "address": {
+      "line1": "Hauptstraße 1",
+      "city": "München",
+      "postal_code": "80331",
+      "country": "DE"
+    },
+    "contact": {
+      "name": "Erika Muster",
+      "phone": "+49 89 123456",
+      "email": "buchhaltung@muster-software.de"
+    }
+  },
+  "buyer": {
+    "name": "Stadt Musterhausen",
+    "electronic_address": {
+      "id": "04011000-12345-03",
+      "scheme": "0204"
+    },
+    "address": {
+      "line1": "Rathausplatz 5",
+      "city": "Musterhausen",
+      "postal_code": "12345",
+      "country": "DE"
+    }
+  },
+  "payment": {
+    "means_code": "58",
+    "remittance_info": "RE-2026-0042",
+    "credit_transfers": [
+      {
+        "iban": "DE02120300000000202051",
+        "bic": "BYLADEM1001",
+        "account_name": "Muster Software GmbH"
+      }
+    ],
+    "terms": "Zahlbar innerhalb von 30 Tagen ohne Abzug."
+  },
+  "lines": [
+    {
+      "name": "Softwarewartung Oktober 2026",
+      "quantity": 1,
+      "unit": "MON",
+      "price": "1200.00",
+      "vat_category": "S",
+      "vat_rate": 19
+    },
+    {
+      "name": "Schulung vor Ort",
+      "description": "Anwenderschulung, 2 Trainer",
+      "quantity": 6.5,
+      "unit": "HUR",
+      "price": "95.00",
+      "vat_category": "S",
+      "vat_rate": 19
+    },
+    {
+      "name": "Fachbuch E-Rechnung",
+      "quantity": 3,
+      "unit": "C62",
+      "price": "39.90",
+      "vat_category": "S",
+      "vat_rate": 7
+    }
+  ]
+}

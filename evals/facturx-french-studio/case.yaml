@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: facturx-french-studio
+expected_outcome: |
+  A Factur-X / ZUGFeRD PDF (PDF/A-3 metadata, OutputIntent, embedded factur-x.xml) whose embedded CII XML passes XSD, EN 16931 and Factur-X EN16931 rules, with net 7050.00, VAT 1410.00, total 8460.00 EUR and the given IBAN.

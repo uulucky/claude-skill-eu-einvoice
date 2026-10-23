@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: convert-zugferd-to-xrechnung
+expected_outcome: |
+  A valid XRechnung 3.0 UBL invoice that keeps invoice number, IBAN, line and document allowances and all amounts of the source (net 1576.50, VAT 299.54, payable 1876.04), with Leitweg-ID 991-04711-83 as buyer reference and a buyer electronic address.
+context:
+  scaffold_script: place-files.sh

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: xrechnung-freelancer-to-city
+expected_outcome: |
+  A single XRechnung 3.0 XML (UBL or CII) that passes XSD, EN 16931 and KoSIT XRechnung validation, with Leitweg-ID 05315000-12345-67 as buyer reference, net 3480.00, VAT 661.20, total/payable 4141.20 EUR, the seller IBAN, and a service period or delivery date in October 2026.

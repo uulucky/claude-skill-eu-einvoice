@@ -1,0 +1,10 @@
+{
+  "name": "eu-einvoice",
+  "version": "1.0.0",
+  "description": "Create, validate, read and convert European e-invoices (EN 16931): XRechnung, Peppol BIS 3.0, ZUGFeRD / Factur-X. Totals and VAT computed for you, validated against the official CEN, KoSIT and OpenPeppol rules - no Java needed.",
+  "author": {"name": "uulucky", "url": "https://github.com/uulucky"},
+  "homepage": "https://github.com/uulucky/claude-skill-eu-einvoice",
+  "repository": "https://github.com/uulucky/claude-skill-eu-einvoice",
+  "license": "MIT",
+  "keywords": ["e-invoice", "einvoicing", "xrechnung", "zugferd", "factur-x", "peppol", "en16931", "ubl", "cii", "e-rechnung", "invoice"]
+}

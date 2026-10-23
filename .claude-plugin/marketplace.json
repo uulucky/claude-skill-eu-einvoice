@@ -1,0 +1,15 @@
+{
+  "name": "uulucky-skills",
+  "owner": {"name": "uulucky", "url": "https://github.com/uulucky"},
+  "metadata": {"description": "Claude skills by uulucky"},
+  "plugins": [
+    {
+      "name": "eu-einvoice",
+      "source": "./",
+      "description": "European e-invoices (EN 16931): create, validate, read and convert XRechnung, Peppol BIS 3.0 and ZUGFeRD / Factur-X with the official rule sets.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "keywords": ["e-invoice", "xrechnung", "zugferd", "factur-x", "peppol", "en16931"]
+    }
+  ]
+}

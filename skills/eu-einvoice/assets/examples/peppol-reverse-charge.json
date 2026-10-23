@@ -1,0 +1,42 @@
+{
+  "_scenario": "Peppol BIS 3.0, Dutch seller -> Belgian business buyer, reverse charge (AE), discounts",
+  "profile": "peppol",
+  "type": "invoice",
+  "number": "INV-2026-1187",
+  "issue_date": "2026-10-23",
+  "due_date": "2026-11-22",
+  "currency": "EUR",
+  "buyer_reference": "PO-BE-55120",
+  "order_reference": "PO-BE-55120",
+  "notes": ["VAT reverse charge: VAT to be accounted for by the recipient (Art. 196 Directive 2006/112/EC)"],
+  "seller": {
+    "name": "Tulip Data B.V.",
+    "vat_id": "NL123456782B01",
+    "legal_id": {"id": "12345678", "scheme": "0106"},
+    "electronic_address": {"id": "12345678", "scheme": "0106"},
+    "address": {"line1": "Keizersgracht 100", "city": "Amsterdam", "postal_code": "1015 AA", "country": "NL"},
+    "contact": {"name": "Sanne de Vries", "email": "billing@tulipdata.nl"}
+  },
+  "buyer": {
+    "name": "Atomium Logistics NV",
+    "vat_id": "BE0123456749",
+    "legal_id": {"id": "0123456749", "scheme": "0208"},
+    "electronic_address": {"id": "0123456749", "scheme": "0208"},
+    "address": {"line1": "Havenlaan 12", "city": "Brussel", "postal_code": "1000", "country": "BE"}
+  },
+  "payment": {
+    "means_code": "58",
+    "remittance_info": "INV-2026-1187",
+    "credit_transfers": [{"iban": "NL91ABNA0417164300", "bic": "ABNANL2A", "account_name": "Tulip Data B.V."}],
+    "terms": "Net 30 days"
+  },
+  "allowances": [
+    {"reason": "Loyalty discount", "reason_code": "95", "percent": 5, "base_amount": "4900.00", "vat_category": "AE", "vat_rate": 0}
+  ],
+  "lines": [
+    {"name": "Data platform licence (annual)", "quantity": 1, "unit": "C62", "price": "4200.00", "vat_category": "AE",
+     "seller_item_id": "DPL-ANNUAL", "order_line_reference": "1"},
+    {"name": "Implementation consulting", "quantity": 8, "unit": "HUR", "price": "110.00", "vat_category": "AE",
+     "allowances": [{"reason": "Project discount", "reason_code": "95", "amount": "180.00"}]}
+  ]
+}

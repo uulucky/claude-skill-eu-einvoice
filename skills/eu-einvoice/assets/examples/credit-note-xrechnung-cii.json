@@ -1,0 +1,78 @@
+{
+  "_scenario": "XRechnung (CII) credit note for a returned item, referencing the original invoice",
+  "profile": "xrechnung-cii",
+  "type": "credit_note",
+  "number": "GS-2026-0007",
+  "issue_date": "2026-10-30",
+  "currency": "EUR",
+  "buyer_reference": "04011000-12345-03",
+  "preceding_invoices": [
+    {
+      "number": "RE-2026-0042",
+      "date": "2026-10-23"
+    }
+  ],
+  "notes": [
+    "Gutschrift für zurückgesandte Fachbücher (beschädigt)"
+  ],
+  "delivery": {
+    "date": "2026-10-20"
+  },
+  "seller": {
+    "name": "Muster Software GmbH",
+    "vat_id": "DE123456782",
+    "legal_id": {
+      "id": "HRB 12345"
+    },
+    "legal_info": "Amtsgericht München HRB 12345, Geschäftsführer: Max Muster",
+    "electronic_address": {
+      "id": "rechnung@muster-software.de",
+      "scheme": "EM"
+    },
+    "address": {
+      "line1": "Hauptstraße 1",
+      "city": "München",
+      "postal_code": "80331",
+      "country": "DE"
+    },
+    "contact": {
+      "name": "Erika Muster",
+      "phone": "+49 89 123456",
+      "email": "buchhaltung@muster-software.de"
+    }
+  },
+  "buyer": {
+    "name": "Stadt Musterhausen",
+    "electronic_address": {
+      "id": "04011000-12345-03",
+      "scheme": "0204"
+    },
+    "address": {
+      "line1": "Rathausplatz 5",
+      "city": "Musterhausen",
+      "postal_code": "12345",
+      "country": "DE"
+    }
+  },
+  "payment": {
+    "means_code": "58",
+    "remittance_info": "GS-2026-0007",
+    "credit_transfers": [
+      {
+        "iban": "DE02120300000000202051",
+        "bic": "BYLADEM1001"
+      }
+    ],
+    "terms": "Der Betrag wird innerhalb von 14 Tagen erstattet."
+  },
+  "lines": [
+    {
+      "name": "Fachbuch E-Rechnung (Rücksendung)",
+      "quantity": 2,
+      "unit": "C62",
+      "price": "39.90",
+      "vat_category": "S",
+      "vat_rate": 7
+    }
+  ]
+}

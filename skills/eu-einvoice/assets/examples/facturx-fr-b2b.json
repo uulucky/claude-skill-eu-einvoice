@@ -1,0 +1,45 @@
+{
+  "_scenario": "Factur-X (EN 16931) PDF, French seller -> French buyer, 20% + 5.5% VAT, freight charge, SIREN/SIRET",
+  "profile": "facturx",
+  "type": "invoice",
+  "number": "FA-2026-00318",
+  "issue_date": "2026-10-23",
+  "due_date": "2026-11-22",
+  "currency": "EUR",
+  "buyer_reference": "SERVICE-ACHATS",
+  "order_reference": "CMD-88412",
+  "notes": [
+    {"subject": "PMT", "text": "Indemnité forfaitaire pour frais de recouvrement en cas de retard de paiement : 40 €."},
+    {"subject": "PMD", "text": "Pénalités de retard : 3 fois le taux d'intérêt légal."}
+  ],
+  "delivery": {"date": "2026-10-20"},
+  "seller": {
+    "name": "Atelier Lumière SAS",
+    "vat_id": "FR11123456782",
+    "legal_id": {"id": "123456782", "scheme": "0002"},
+    "legal_info": "SAS au capital de 50 000 €, RCS Lyon 123 456 782",
+    "electronic_address": {"id": "factures@atelier-lumiere.fr", "scheme": "EM"},
+    "address": {"line1": "12 rue de la République", "city": "Lyon", "postal_code": "69002", "country": "FR"},
+    "contact": {"name": "Camille Martin", "phone": "+33 4 72 00 00 00", "email": "compta@atelier-lumiere.fr"}
+  },
+  "buyer": {
+    "name": "Librairie du Parc SARL",
+    "vat_id": "FR14987654324",
+    "legal_id": {"id": "987654324", "scheme": "0002"},
+    "address": {"line1": "3 avenue Foch", "city": "Paris", "postal_code": "75116", "country": "FR"}
+  },
+  "payment": {
+    "means_code": "58",
+    "remittance_info": "FA-2026-00318",
+    "credit_transfers": [{"iban": "FR1420041010050500013M02606", "bic": "PSSTFRPPLYO"}],
+    "terms": "Paiement à 30 jours fin de mois. Pas d'escompte pour paiement anticipé."
+  },
+  "charges": [
+    {"reason": "Frais de port", "reason_code": "FC", "amount": "25.00", "vat_category": "S", "vat_rate": 20}
+  ],
+  "lines": [
+    {"name": "Lampe de bureau « Aurore »", "seller_item_id": "LAMP-AUR", "quantity": 12, "unit": "C62", "price": "64.50", "vat_category": "S", "vat_rate": 20},
+    {"name": "Ampoule LED E27 9 W", "quantity": 24, "unit": "C62", "gross_price": "6.90", "price_discount": "0.90", "vat_category": "S", "vat_rate": 20},
+    {"name": "Catalogue 2027 (livre)", "quantity": 50, "unit": "C62", "price": "4.20", "vat_category": "S", "vat_rate": 5.5}
+  ]
+}

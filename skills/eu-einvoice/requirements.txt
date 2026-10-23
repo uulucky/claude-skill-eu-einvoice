@@ -1,0 +1,6 @@
+# Python >= 3.9
+lxml>=5.0
+saxonche>=12.5     # Saxon-HE XSLT 3.0 for the official Schematron rules (no Java)
+factur-x>=7.0      # XSDs, Factur-X schematron, PDF/A-3 XML embedding
+pypdf>=4.0
+reportlab>=4.0     # visual invoice PDF
