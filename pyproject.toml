@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eu-einvoice"
+version = "1.0.0"
+description = "Create, validate, read and convert European e-invoices (EN 16931): XRechnung, Peppol BIS 3.0, ZUGFeRD / Factur-X - official CEN, KoSIT and Peppol rules, no Java"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "uulucky" }]
+keywords = ["e-invoice", "einvoicing", "xrechnung", "zugferd", "factur-x", "peppol", "en16931", "ubl", "cii", "e-rechnung", "schematron"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Topic :: Office/Business :: Financial :: Accounting",
+  "Topic :: Text Processing :: Markup :: XML",
+]
+dependencies = [
+  "lxml>=5.0",
+  "saxonche>=12.5",
+  "factur-x>=7.0",
+  "pypdf>=4.0",
+  "reportlab>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/uulucky/claude-skill-eu-einvoice"
+Source = "https://github.com/uulucky/claude-skill-eu-einvoice"
+Issues = "https://github.com/uulucky/claude-skill-eu-einvoice/issues"
+
+[project.scripts]
+eu-einvoice = "eu_einvoice.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "skills/eu-einvoice/scripts" }
+packages = ["eu_einvoice"]
+
+[tool.setuptools.package-data]
+eu_einvoice = ["examples/*.json"]

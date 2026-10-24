@@ -1,6 +1,8 @@
 # eu-einvoice: a Claude skill for European e-invoices
 
-[中文说明](README.zh-CN.md)
+[中文说明](README.zh-CN.md) · [PyPI: eu-einvoice](https://pypi.org/project/eu-einvoice/)
+
+![Demo: creating a validated XRechnung and diagnosing a rejected Peppol invoice](docs/img/demo.gif)
 
 A Claude skill (packaged as a Claude Code plugin) that **creates, validates, reads and
 converts European structured e-invoices** following EN 16931: **XRechnung** (UBL and CII),
@@ -47,6 +49,14 @@ the Skills settings).
 
 **Manual**: copy `skills/eu-einvoice/` to `~/.claude/skills/eu-einvoice/`.
 
+**Without Claude** (Python library and command line):
+
+```bash
+pip install eu-einvoice
+eu-einvoice template xrechnung-b2g > invoice.json   # edit, then:
+eu-einvoice create invoice.json -o invoice.xml      # computes totals, writes XML, validates it
+```
+
 **Requirements**: Python 3.9+. On first use the skill creates a virtual environment from
 `skills/eu-einvoice/requirements.txt` (lxml, saxonche, factur-x, pypdf, reportlab). The
 official rule sets are downloaded on the first validation into `~/.cache/eu-einvoice/rules`
@@ -62,16 +72,16 @@ official rule sets are downloaded on the first validation into `~/.cache/eu-einv
 | "I got xrechnung.xml from a supplier and can't open it" | shows amount, due date and IBAN, and renders a printable PDF |
 | "Convert this ZUGFeRD PDF to XRechnung UBL for the ZRE portal" | extracts, adds the missing XRechnung fields (asks you for them), converts, validates |
 
-The tool can also be used without Claude:
+The same commands work without Claude (`pip install eu-einvoice`):
 
 ```bash
-python skills/eu-einvoice/scripts/einvoice_cli.py template                 # list example scenarios
-python skills/eu-einvoice/scripts/einvoice_cli.py check invoice.json -p xrechnung-ubl
-python skills/eu-einvoice/scripts/einvoice_cli.py create invoice.json -p peppol -o out.xml
-python skills/eu-einvoice/scripts/einvoice_cli.py validate received.xml     # or a Factur-X PDF
-python skills/eu-einvoice/scripts/einvoice_cli.py extract received.pdf -o data.json
-python skills/eu-einvoice/scripts/einvoice_cli.py convert in.xml --to xrechnung-cii -o out.xml
-python skills/eu-einvoice/scripts/einvoice_cli.py render received.xml -o view.pdf
+eu-einvoice template                                  # list example scenarios
+eu-einvoice check invoice.json -p xrechnung-ubl       # computed lines, VAT breakdown, problems
+eu-einvoice create invoice.json -p peppol -o out.xml
+eu-einvoice validate received.xml                     # or a Factur-X / ZUGFeRD PDF
+eu-einvoice extract received.pdf -o data.json
+eu-einvoice convert in.xml --to xrechnung-cii -o out.xml
+eu-einvoice render received.xml -o view.pdf
 ```
 
 ## Profiles and rule sets

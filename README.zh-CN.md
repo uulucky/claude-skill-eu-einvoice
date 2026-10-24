@@ -1,6 +1,8 @@
 # eu-einvoice：欧盟电子发票 Claude Skill
 
-[English](README.md)
+[English](README.md) · [PyPI: eu-einvoice](https://pypi.org/project/eu-einvoice/)
+
+![演示：生成通过校验的 XRechnung，诊断被拒的 Peppol 发票](docs/img/demo.gif)
 
 这是一个 Claude skill（同时打包成 Claude Code 插件），用来**生成、校验、读取和转换欧盟结构化电子发票**（EN 16931 标准）。支持的格式有：**XRechnung**（UBL 和 CII）、**Peppol BIS Billing 3.0**、**ZUGFeRD / Factur-X** 混合 PDF，以及普通的 UBL 2.1 和 UN/CEFACT CII。
 
@@ -36,7 +38,13 @@
 - "供应商发来 xrechnung.xml，打不开"：告诉你应付金额、到期日和 IBAN，并生成可打印的 PDF。
 - "把这张 ZUGFeRD PDF 转成 XRechnung UBL，要传 ZRE 平台"：缺的必填字段会先问你，补齐后转换并校验。
 
-不通过 Claude，也可以直接用命令行，命令见英文 README。
+不通过 Claude 也能用，直接装 Python 包：
+
+```bash
+pip install eu-einvoice
+eu-einvoice template xrechnung-b2g > invoice.json   # 改好数据后：
+eu-einvoice create invoice.json -o invoice.xml      # 自动算金额、生成 XML 并校验
+```
 
 ## 局限
 
