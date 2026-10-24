@@ -22,5 +22,9 @@
     "cii",
     "e-rechnung",
     "invoice"
-  ]
+  ],
+  "documentationUrl": "https://github.com/uulucky/claude-skill-eu-einvoice#readme",
+  "supportUrl": "https://github.com/uulucky/claude-skill-eu-einvoice/issues",
+  "privacyPolicyUrl": "https://github.com/uulucky/claude-skill-eu-einvoice/blob/main/docs/PRIVACY.md",
+  "termsOfServiceUrl": "https://github.com/uulucky/claude-skill-eu-einvoice/blob/main/LICENSE"
 }
