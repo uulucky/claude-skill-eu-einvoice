@@ -26,7 +26,7 @@
 
 **claude.ai 网页版 / Claude 桌面 App**：从 [Releases](https://github.com/uulucky/claude-skill-eu-einvoice/releases/latest) 下载 `eu-einvoice.skill`，拖进对话后点 "Save skill"，也可以在设置的 Skills 页面上传。
 
-**手动安装**：把 `skills/eu-einvoice/` 复制到 `~/.claude/skills/eu-einvoice/`。
+**手动安装**：把 `plugin/skills/eu-einvoice/` 复制到 `~/.claude/skills/eu-einvoice/`。
 
 **环境要求**：Python 3.9 以上。第一次使用时，skill 会按 `requirements.txt` 自动建虚拟环境。官方规则包在第一次校验时下载到 `~/.cache/eu-einvoice/rules`，可以用环境变量 `EINVOICE_RULES_DIR` 改位置。
 

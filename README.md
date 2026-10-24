@@ -47,7 +47,7 @@ my supplier sent?". Claude then uses the bundled tooling instead of writing XML 
 and upload it as a skill (drag it into a chat and click "Save skill", or upload it in
 the Skills settings).
 
-**Manual**: copy `skills/eu-einvoice/` to `~/.claude/skills/eu-einvoice/`.
+**Manual**: copy `plugin/skills/eu-einvoice/` to `~/.claude/skills/eu-einvoice/`.
 
 **Without Claude** (Python library and command line):
 
@@ -58,7 +58,7 @@ eu-einvoice create invoice.json -o invoice.xml      # computes totals, writes XM
 ```
 
 **Requirements**: Python 3.9+. On first use the skill creates a virtual environment from
-`skills/eu-einvoice/requirements.txt` (lxml, saxonche, factur-x, pypdf, reportlab). The
+`plugin/skills/eu-einvoice/requirements.txt` (lxml, saxonche, factur-x, pypdf, reportlab). The
 official rule sets are downloaded on the first validation into `~/.cache/eu-einvoice/rules`
 (set `EINVOICE_RULES_DIR` to change the location).
 
@@ -94,7 +94,7 @@ eu-einvoice render received.xml -o view.pdf
 | `en16931-ubl`, `en16931-cii` | UBL / CII | XSD, CEN EN 16931 |
 
 Rule-set updates come out about twice a year. `einvoice_cli.py rules check-updates`
-reports newer releases, and `skills/eu-einvoice/references/maintenance.md` explains how
+reports newer releases, and `plugin/skills/eu-einvoice/references/maintenance.md` explains how
 to bump the pins.
 
 ## Quality
@@ -105,7 +105,7 @@ to bump the pins.
   note, intra-EU supply) are all valid.
 - Six eval cases live in [`evals/`](evals); see [docs/benchmark.md](docs/benchmark.md)
   for with-skill vs. without-skill results. You can run them yourself with
-  `claude plugin eval .`.
+  `claude plugin eval plugin --eval-dir evals`.
 
 ## Limits
 

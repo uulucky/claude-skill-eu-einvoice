@@ -37,7 +37,7 @@ Issues = "https://github.com/uulucky/claude-skill-eu-einvoice/issues"
 eu-einvoice = "eu_einvoice.cli:main"
 
 [tool.setuptools]
-package-dir = { "" = "skills/eu-einvoice/scripts" }
+package-dir = { "" = "plugin/skills/eu-einvoice/scripts" }
 packages = ["eu_einvoice"]
 
 [tool.setuptools.package-data]
